@@ -1,0 +1,290 @@
+@font-face {
+  font-family: "Gidole";
+  src: url(../MyAssets/Gidole-Regular.otf)format("opentype");
+  src: url(../MyAssets/GidoleWebFontKit/Gidole-Regular.woff2) format('woff2'),
+    url(../MyAssets/GidoleWebFontKit/Gidole-Regular.woff) format('woff'),
+    url(../MyAssets/GidoleWebFontKit/Gidole-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: "Gidole", sans-serif !important;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative
+}
+
+.bannerEdit {
+  padding-top: 10px;
+}
+
+.LandingLogo {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width:400px) {
+  .LandingLogo_logo {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .LandingLogo_logo {
+    width: 200;
+  }
+}
+
+.LandingLogo_text {
+  font-size: 100px;
+  color: #d40000;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
+}
+
+.LandingLogo_tag {
+  font-size: 25px;
+  align-self: center;
+}
+
+.LandingEmail {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: inherit;
+}
+
+.myItem {
+  height: inherit;
+  width: 30vw;
+  margin-left: auto;
+}
+
+.myInbox {
+  margin-bottom: 10px;
+}
+
+.A {
+  justify-content: flex-start;
+}
+
+.B {
+  justify-content: center;
+  width: 40vw;
+  margin-left: 5vw;
+}
+
+.C {
+  justify-content: flex-end;
+}
+
+#p {
+  color: white;
+}
+
+/*
+.bigP {
+  font-size: 22px;
+}
+*/
+.myStepContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+}
+
+.myWorksStep {
+  width: inherit;
+  display: flex;
+  padding-bottom: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgHold {
+  width: 300px;
+}
+
+.imgHold img {
+  width: 100%;
+  transform: scale(1.4);
+}
+
+.myTextStep {
+  text-align: left;
+  width: 300px;
+}
+
+.myTextStep2 {
+  text-align: right;
+  width: 300px;
+}
+
+.myTextStep h3 {
+  font-size: 26px;
+}
+
+.myTextStep2 h3 {
+  font-size: 26px;
+}
+
+.myTextStep p {
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+
+.myTextStep2 p {
+  font-size: 20px;
+}
+
+.bigcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCon {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.myCards {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardImg {
+  border-radius: 5px 5px 0 0;
+  width: 200px;
+  height: 140px;
+}
+
+.container {
+  padding: 2px 16px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style buttons */
+.myContactButtons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #444444;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 230px;
+  height: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
+  opacity: 0.9;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #4f4f4f;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+a, button, a:active, a:focus, a:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+.myIcon {
+  padding: 0;
+  opacity: 1;
+}
+
+.featureCon2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: red;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container1 {
+  padding: 2px 16px;
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0px;
+}
+
+.myAlign {
+  text-align: center;
+}
+
+.fields {
+  align-items: center;
+  margin: auto;
+  width: 40vw;
+}
+
+.myUpMarg {
+  padding-top: 20px;
+}

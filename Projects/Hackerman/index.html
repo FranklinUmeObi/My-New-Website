@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Hackerman</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="ajax.js"></script>
+</head>
+
+
+
+
+<body>
+
+  <div id="console">
+    <p>Greetings friend...I will call you by your name <span id="0">loading...</span></p>
+    <p>Thank you for visiting me.</p>
+    <p>I get lonely on the internet, I have nobody to talk to...</p>
+    <p>If you don't mind, I'm gonna come over to play with you.</p>
+    <p>I'm on my way over now, I can see you live in <span id="1">loading...</span></p>
+    <p>To be more specific, <span id="3">loading...</span> in <span id="2">loading...</span></p>
+    <p>If you want to find me, pick me up at these co-ordinates, <span id="4">loading...</span>,<span id="5">loading...</span></p>
+    <p>copy and paste them into google maps... I'll be waiting...</p>
+  </div>
+
+
+
+
+
+
+
+  <script>
+    $(function() {
+
+      // set endpoint and your access key
+      var ip = '134.201.250.155'
+      var access_key = '1a497a28a594d4d2f70c4666fc297427';
+
+      // get the API result via jQuery.ajax
+      $.ajax({
+        //url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
+        url: 'http://api.ipstack.com/check' + '?access_key=' + access_key,
+        dataType: 'jsonp',
+        success: function(json) {
+
+          // output the "capital" object inside "location"
+          //alert(json.location.capital);
+          document.getElementById("0").innerHTML = json.ip
+          document.getElementById("1").innerHTML = json.continent_name
+          document.getElementById("2").innerHTML = json.country_name
+          document.getElementById("3").innerHTML = json.city
+          document.getElementById("4").innerHTML = json.latitude
+          document.getElementById("5").innerHTML = json.longitude
+
+        }
+      });
+
+    });
+  </script>
+</body>
+
+</html>
