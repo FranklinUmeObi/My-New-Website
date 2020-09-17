@@ -1,0 +1,124 @@
+import React from 'react'
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+
+
+import "./boxSelect.css";
+import data from '../Data/CourseData.json'
+
+function Sem1List(props) {
+
+const [state, setState] = React.useState(props);
+
+
+const checkbox = props.state.map((checked, index) => (
+  <li className="cardText" key={index}>{checked}</li>
+    <FormControlLabel className="box1"
+    control={
+      <Checkbox checked={props.state.selected[{index}]}onChange={() => onUpdateItem(index)}name="0" />}
+    label= {data.Courses[0].name}/>
+
+));
+
+
+  const onUpdateItem = i =>
+  {
+    props.setState(state =>
+      {
+      const selected = state.selected.map((item, j) =>
+      {
+        if (j === i)
+        {
+          return !item;
+        }
+        else
+        {
+          return item;
+        }
+      });
+      return {
+        selected,
+      };
+    });
+  };
+
+
+  return (
+    <div className="boxSelectInput">
+    <div className="boxes">
+      <h2 className="boxHeader">Business</h2>
+      <FormGroup className="boxesGroup">
+        <FormControlLabel className="box1"
+        control={
+          <Checkbox checked={props.state.selected[0]}onChange={() => onUpdateItem(0)}name="0" />}
+        label= {data.Courses[0].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox  checked={props.state.selected[1]} onChange={() => onUpdateItem(1)} name="checkedB" />}
+        label={data.Courses[1].name}/>
+
+        <FormControlLabel className="box1"
+        control={<Checkbox checked={props.state.selected[2]} onChange={() => onUpdateItem(2)} name="checkedC" />}
+        label={data.Courses[2].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox checked={props.state.selected[3]} onChange={() => onUpdateItem(3)} name="checkedD" />}
+        label= {data.Courses[3].name}/>
+
+        <FormControlLabel className="box1"
+        control={<Checkbox checked={props.state.selected[4]} onChange={() => onUpdateItem(4)} name="checkedE" />}
+        label={data.Courses[4].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox checked={props.state.selected[5]} onChange={() => onUpdateItem(5)} name="checkedF" />}
+        label={data.Courses[5].name}/>
+
+        <FormControlLabel  className="box1"
+        control={<Checkbox checked={props.state.selected[6]} onChange={() => onUpdateItem(6)} name="checkedG" />}
+        label={data.Courses[6].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox checked={props.state.selected[7]} onChange={() => onUpdateItem(7)} name="checkedH" />}
+        label={data.Courses[7].name}/>
+      </FormGroup>
+    </div>
+
+    <div className="boxes">
+      <h2 className="boxHeader">Computer Science</h2>
+      <FormGroup className="boxesGroup">
+        <FormControlLabel className="box1"
+        control={<Checkbox  checked={props.state.selected[8]} onChange={() => onUpdateItem(8)} name="checkedA2" />}
+        label={data.Courses[8].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox  checked={props.state.selected[9]} onChange={() => onUpdateItem(9)} name="checkedB2" />}
+        label={data.Courses[9].name}/>
+
+        <FormControlLabel className="box1"
+        control={<Checkbox checked={props.state.selected[10]} onChange={() => onUpdateItem(10)} name="checkedC2" />}
+        label={data.Courses[10].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox checked={props.state.selected[11]} onChange={() => onUpdateItem(11)} name="checkedD2" />}
+        label={data.Courses[11].name}/>
+
+        <FormControlLabel className="box1"
+        control={<Checkbox checked={props.state.selected[12]} onChange={() => onUpdateItem(12)} name="checkedE2" />}
+        label={data.Courses[12].name}/>
+
+        <FormControlLabel className="box2"
+        control={<Checkbox checked={props.state.selected[13]} onChange={() => onUpdateItem(13)} name="checkedF2" />}
+        label={data.Courses[13].name}/>
+
+        <FormControlLabel  className="box1"
+        control={<Checkbox checked={props.state.selected[13]} onChange={() => onUpdateItem(14)} name="checkedG2" />}
+        label={data.Courses[14].name}/>
+
+      </FormGroup>
+      </div>
+    </div>
+  )
+}
+
+export default Sem1List

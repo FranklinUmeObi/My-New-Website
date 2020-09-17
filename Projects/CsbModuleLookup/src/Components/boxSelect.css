@@ -1,0 +1,43 @@
+.boxesGroup {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+}
+
+.boxSelectInput {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+
+.boxes {
+  padding: 20px;
+}
+
+.box2 {
+  background-color: #fff;
+  padding: 5px;
+  text-align: left;
+}
+
+.box1 {
+  background-color: #f3f3f3;
+  padding: 5px;
+  text-align: left;
+}
+
+.boxHeader {
+  padding-top: 20px;
+}
+
+.buttonContainer {
+  padding: 60px;
+}
+
+.button {
+  height: 60px;
+  width: 140px;
+}

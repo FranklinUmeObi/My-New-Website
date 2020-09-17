@@ -1,0 +1,12 @@
+.userSelect {
+  background-color: white;
+}
+
+.radioButtonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radioButton {
+  padding: 50px;
+}

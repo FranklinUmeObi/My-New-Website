@@ -1,0 +1,13 @@
+.mainContainer {}
+
+.mainContainer__text {
+  padding: 50px;
+}
+
+.cardsContainer {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

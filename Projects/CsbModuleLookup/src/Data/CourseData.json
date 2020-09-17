@@ -1,0 +1,245 @@
+{
+  "Courses": [{
+      "id": 1,
+      "school": "Business",
+      "code": "BUU33521",
+      "name": "Management Accounting for Business Decisions I",
+      "students": ["Franklin Ume Obiekwe", "Sean Larkin","Rachel Brady" ,"Sam Walsh"],
+      "semester": 1
+    },
+    {
+      "id": 2,
+      "school": "Business",
+      "code": "BUU33531",
+      "name": "Financial Accounting I",
+      "students": ["Chris Staunton", "Ethan Monkhouse","Adam Lysaght",
+        "Maria Alonso Garcia","Kishore Muthu", "Rachel Brady" ,"Sam Walsh"],
+      "semester": 1
+
+    },
+    {
+      "id": 3,
+      "school": "Business",
+      "code": "BUU33590",
+      "name": "Business in Society",
+      "students": ["Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 4,
+      "school": "Business",
+      "code": "BUU33620",
+      "name": "Introduction to Fixed Income Securities & Alternative Investments",
+      "students": ["Sean Larkin", "Ethan Monkhouse", "Maria Alonso Garcia"],
+      "semester": 1
+    },
+    {
+      "id": 5,
+      "school": "Business",
+      "code": "BUU33680",
+      "name": "Investments",
+      "students": ["Sean Larkin", "Chris Staunton", "Ethan Monkhouse",
+        "Cian Galligan", "Adam Lysaght", "Maria Alonso Garcia",
+        "Kishore Muthu","Rachel Brady","Sam Walsh","Eoin Donnelly Maguire",
+        "Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 6,
+      "school": "Business",
+      "code": "BUU33700",
+      "name": "Contemporary Marketing Management",
+      "students": ["Sean Larkin","Sam Walsh","Eoin Donnelly Maguire"],
+      "semester": 1
+    },
+    {
+      "id": 7,
+      "school": "Business",
+      "code": "BUU33720",
+      "name": "Taxation 1",
+      "students": ["Franklin Ume Obiekwe", "Ethan Monkhouse","Cian Galligan",
+        "Adam Lysaght","Rachel Brady"],
+      "semester": 1
+    },
+    {
+      "id": 8,
+      "school": "Business",
+      "code": "BUU33740",
+      "name": "Financial Management",
+      "students": ["Ethan Monkhouse", "Maria Alonso Garcia"],
+      "semester": 1
+    },
+    {
+      "id": 9,
+      "school": "Computer Science",
+      "code": "CSU23031",
+      "name": "Telecommunications II",
+      "students": [],
+      "semester": 1
+    },
+    {
+      "id": 10,
+      "school": "Computer Science",
+      "code": "CSU34011",
+      "name": "Symbolic Programming",
+      "students": ["Franklin Ume Obiekwe", "Sean Larkin", "Chris Staunton",
+        "Kishore Muthu","Eoin Donnelly Maguire"],
+      "semester": 1
+    },
+    {
+      "id": 11,
+      "school": "Computer Science",
+      "code": "CSU33012",
+      "name": "Software Engineering",
+      "students": ["Franklin Ume Obiekwe","Adam Lysaght", "Maria Alonso Garcia",
+        "Kishore Muthu","Rachel Brady","Sam Walsh","Eoin Donnelly Maguire","Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 12,
+      "school": "Computer Science",
+      "code": "CSU34016",
+      "name": "Introduction to Functional Programming",
+      "students": ["Sean Larkin", "Chris Staunton", "Kishore Muthu","Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 13,
+      "school": "Computer Science",
+      "code": "CSU34041",
+      "name": "Information Management",
+      "students": ["Franklin Ume Obiekwe", "Chris Staunton","Cian Galligan", "Adam Lysaght",
+        "Maria Alonso Garcia","Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 14,
+      "school": "Computer Science",
+      "code": "CSU33071",
+      "name": "Compiler Design I",
+      "students": ["Kishore Muthu","Rachel Brady","Eoin Donnelly Maguire","Molly Carles"],
+      "semester": 1
+    },
+    {
+      "id": 15,
+      "school": "Computer Science",
+      "code": "CSU33BC1",
+      "name": "E-Business I",
+      "students": ["Franklin Ume Obiekwe", "Sean Larkin", "Chris Staunton","Ethan Monkhouse",
+        "Cian Galligan", "Adam Lysaght", "Sam Walsh", "Eoin Donnelly Maguire"],
+      "semester": 1
+    },
+    {
+      "id": 16,
+      "school": "Business",
+      "code": "BUU33522",
+      "name": "Management Accounting for Business Decisions II",
+      "students": ["Rachel Brady", "Sam Walsh"],
+      "semester": 2
+    },
+    {
+      "id": 17,
+      "school": "Business",
+      "code": "BUU33532",
+      "name": "Financial Accounting II",
+      "students": ["Chris Staunton","Adam Lysaght", "Maria Alonso Garcia","Kishore Muthu",
+      "Rachel Brady", "Sam Walsh"],
+      "semester": 2
+    },
+    {
+      "id": 18,
+      "school": "Business",
+      "code": "BUU33600",
+      "name": "Innovation, Entrepreneurship & Business Modelling",
+      "students": ["Franklin Ume Obiekwe", "Sean Larkin","Cian Galligan","Maria Alonso Garcia"],
+      "semester": 2
+    },
+    {
+      "id": 19,
+      "school": "Business",
+      "code": "BUU33630",
+      "name": "Corporate Finance & Equity Valuation",
+      "students": ["Chris Staunton","Ethan Monkhouse", "Adam Lysaght", "Maria Alonso Garcia",
+        "Kishore Muthu","Rachel Brady", "Sam Walsh","Eoin Donnelly Maguire"],
+      "semester": 2
+    },
+    {
+      "id": 20,
+      "school": "Business",
+      "code": "BUU33660",
+      "name": "Organisation Theory & Organisation Analysis",
+      "students": ["Eoin Donnelly Maguire", "Molly Carles"],
+      "semester": 2
+    },
+    {
+      "id": 21,
+      "school": "Business",
+      "code": "BUU33690",
+      "name": "Social Entrepreneurship",
+      "students": ["Sean Larkin", "Eoin Donnelly Maguire"],
+      "semester": 2
+    },
+    {
+      "id": 22,
+      "school": "Business",
+      "code": "BUU33710",
+      "name": "Consumer Behaviour",
+      "students": ["Franklin Ume Obiekwe", "Sean Larkin", "Sam Walsh", "Eoin Donnelly Maguire",
+         "Molly Carles"],
+      "semester": 2
+    },
+    {
+      "id": 23,
+      "school": "Business",
+      "code": "BUU33730",
+      "name": "Taxation 2",
+      "students": ["Ethan Monkhouse","Adam Lysaght","Rachel Brady"],
+      "semester": 2
+    },
+    {
+      "id": 24,
+      "school": "Computer Science",
+      "code": "CSU33061",
+      "name": "Artificial Intelligence I",
+      "students": ["Franklin Ume Obiekwe", "Chris Staunton", "Kishore Muthu"],
+      "semester": 2
+    },
+    {
+      "id": 25,
+      "school": "Computer Science",
+      "code": "CSU33081",
+      "name": "Computational Mathematics",
+      "students": ["Chris Staunton", "Ethan Monkhouse", "Maria Alonso Garcia",
+        "Kishore Muthu", "Rachel Brady", "Molly Carles"],
+      "semester": 2
+    },
+    {
+      "id": 26,
+      "school": "Computer Science",
+      "code": "CSU33013",
+      "name": "Software Engineering Group Project",
+      "students": ["Franklin Ume Obiekwe", "Chris Staunton", "Adam Lysaght","Kishore Muthu",
+      "Eoin Donnelly Maguire", "Molly Carles"],
+      "semester": 2
+    },
+    {
+      "id": 27,
+      "school": "Computer Science",
+      "code": "STU33009",
+      "name": "Statistical Methods for Computer Science",
+      "students": ["Sean Larkin", "Chris Staunton","Ethan Monkhouse", "Adam Lysaght",
+        "Maria Alonso Garcia","Sam Walsh", "Molly Carles"],
+      "semester": 2
+    },
+    {
+      "id": 28,
+      "school": "Computer Science",
+      "code": "STU33005",
+      "name": "Information Systems",
+      "students": ["Franklin Ume Obiekwe", "Ethan Monkhouse", "Adam Lysaght","Kishore Muthu",
+      "Rachel Brady", "Sam Walsh","Eoin Donnelly Maguire", "Molly Carles"],
+      "semester": 2
+    }
+
+  ]
+}

@@ -1,0 +1,77 @@
+.card {
+  margin: 30px;
+  background-color: #f5f5f5;
+  width: 350px;
+  height: 500px;
+  border-radius: 30px;
+  /*Box shadow*/
+  -webkit-box-shadow: -7px 13px 8px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -7px 13px 8px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -7px 13px 8px -6px rgba(0, 0, 0, 0.75);
+}
+
+.cardImg {
+  width: inherit;
+  border-radius: inherit;
+  background: #f2709c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9472, #f2709c);
+}
+
+.cardTitleContainer {
+  padding: 20px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  color: white;
+  font-weight: bold;
+}
+
+.cardTextTitle {
+  padding: 15px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.cardTextContainer {
+  height: 320px;
+}
+
+.textContainer {
+  overflow-y: scroll;
+  height: 260px;
+}
+
+.cardText {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px;
+}
+
+/*ScrollBar*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f50057;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f00054;
+}
