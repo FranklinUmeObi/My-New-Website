@@ -21,7 +21,8 @@
       You are receiving this to confirm your message was received.
       I will respond at my earliest convenience.
       This is an automated E-mail.";
-      mail($emailFrom, $subjectReturn, $txtReturn);
+	  mail($emailFrom, $subjectReturn, $txtReturn);
+	  
 		}
 }
 
