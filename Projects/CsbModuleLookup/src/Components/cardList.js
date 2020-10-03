@@ -10,12 +10,12 @@ function CardList(props) {
       state={props.state} />
   ));
 
-  if (props.show == true) {
+  if (props.show === true) {
     return (
       <div className="mainContainer">
         <h2 className="mainContainer__text">Selected Modules</h2>
         <div>
-          <ul className="cardsContainer">{cards}</ul>,
+          <ul className="cardsContainer">{cards}</ul>
         </div>
       </div>
     );

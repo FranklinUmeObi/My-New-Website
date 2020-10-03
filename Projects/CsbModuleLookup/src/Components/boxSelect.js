@@ -15,14 +15,15 @@ function BoxSelect(props) {
 
   //--------------------------------------------------
   //State
-  const [state, setState] = React.useState({
-    selected: [
-      false, false, false, false, false, false, false, false, false, false,
-      false, false, false, false, false, false, false, false, false, false,
-      false, false, false, false, false, false, false, false, false ],
-
-    listVisibility:false
-  });
+  const [state, setState] = React.useState(
+    {
+      selected: 
+      [false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false ],
+      listVisibility:false
+    }
+  );
 
 
 //--------------------------------------------------
@@ -37,7 +38,7 @@ function BoxSelect(props) {
 //--------------------------------------------------
 //Semester 1 Checkboxes
 
-  if (props.semester == 1)
+  if (props.semester === "1")
   {
     return (
       <div className="boxSelect">

@@ -18,15 +18,18 @@ function UserSelect(props) {
   };
   return (
     <div className="userSelect">
-    <FormControl component="fieldset">
-      <FormLabel component="legend">Select a Semester to check</FormLabel>
-      <RadioGroup className="radioButtonGroup" row aria-label="Semester" name="Semester" value={value} onChange={handleChange}>
-        <FormControlLabel className="radioButton" value="1" control={<Radio/>} label="Semester 1" />
-        <FormControlLabel className="radioButton" value="2" control={<Radio/>} label="Semester 2" />
-      </RadioGroup>
-    </FormControl>
-    <h3>Select the modules you would like to search below</h3>
-    <BoxSelect semester = {value}/>
+      <FormControl component="fieldset">
+        
+        <FormLabel component="legend">Select a Semester to check</FormLabel>
+        <RadioGroup className="radioButtonGroup" row aria-label="Semester" name="Semester" value={value} onChange={handleChange}>
+          <FormControlLabel className="radioButton" value="1" control={<Radio/>} label="Semester 1" />
+          <FormControlLabel className="radioButton" value="2" control={<Radio/>} label="Semester 2" />
+        </RadioGroup>
+
+      </FormControl>
+
+      <h3>Select the modules you would like to search below</h3>
+      <BoxSelect semester = {value}/>
     </div>
 
   );

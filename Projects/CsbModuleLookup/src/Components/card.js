@@ -12,7 +12,7 @@ function Card(props) {
   let ids = [];
 
   for (var i = 0; i < items.length - 1; i++) {
-    if (items[i] == true) ids.push(i);
+    if (items[i] === true) ids.push(i);
   }
 
 

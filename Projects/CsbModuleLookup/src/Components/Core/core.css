@@ -1,0 +1,27 @@
+.header__text {
+    padding: 50px;
+    color: white;
+    font-style: oblique;
+}
+
+.footer {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wave {
+    margin-bottom: -20px;
+    margin-top: -80px;
+    z-index: 10;
+    width: inherit;
+}
+
+.wave2 {
+    width: inherit;
+}
+
+.wavePath {
+    fill: #fff;
+}

@@ -1,7 +1,7 @@
 .card {
   margin: 30px;
   background-color: #f5f5f5;
-  width: 350px;
+  width: 320px;
   height: 500px;
   border-radius: 30px;
   /*Box shadow*/
@@ -35,7 +35,6 @@
 
 .cardTextTitle {
   padding: 15px;
-  border-bottom: 2px solid lightgrey;
 }
 
 .cardTextContainer {
