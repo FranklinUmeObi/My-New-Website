@@ -2,10 +2,8 @@
 function handleInput()
 {
   var x = document.getElementById("textBox").value;
-  console.log(x);
   main(x);
 }
-
 
 //------------------------------------------------------------------------------
 //Get Request
@@ -27,10 +25,10 @@ async function main(user) {
   //URL Endpoints
   let url = `https://api.github.com/users/${user}/repos`;
   let reposData = await GetRequest(url).catch(error => console.error(error));
-  
+ 
   //Social Graph
   socialGraphParse(reposData);
-  //PieChart -- Make this Treemap
+  //PieChart
   commitsPerRepo(reposData, user)
   //TreeMap
   usersLanguages(reposData, user)
@@ -65,7 +63,7 @@ async function usersLanguages(userReposData, user) {
     repoLangObj.push(a)
   }
 
-  console.log(repoLangObj);//array of repos lang objects
+  
 
   for (let i = 0; i < repoLangObj.length; i++) 
   {
@@ -75,12 +73,12 @@ async function usersLanguages(userReposData, user) {
         languages.add(keyArr[j])
       }
   }
-  console.log(languages);//array of languages used
+  
 
   let langSize = new Map()
   for (let value of languages) langSize.set(value, 0);   // init map
 
-  console.log(langSize);//array of languages used
+ 
 
   for (let i = 0; i < repoLangObj.length; i++) 
   {
@@ -94,9 +92,9 @@ async function usersLanguages(userReposData, user) {
     }
 
   }
-  console.log(langSize);//array of languages used
 
   let children = []
+  let values = []
   for (const [key, value] of langSize.entries()) 
   {
     let node = {
@@ -105,10 +103,15 @@ async function usersLanguages(userReposData, user) {
       "value":value,
       "colname":"languages"
     }
+    values.push(value)
     children.push(node)
 
   }
-  console.log(children);
+  let big = Math.max(...values)
+
+  for (const e of children) {
+    e.value = scale(e.value, 0, big, 1, 500)
+  }
 
   D3_TreeMap(children);
 }
@@ -133,7 +136,6 @@ async function socialGraphParse(rawData) {
     let repo = { index: i, repo: element.name, contributers: contributersName };
     arrRepos.push(repo);
     }
-    
   }
 
   for (let i = 0; i < arrRepos.length; i++) 
@@ -235,13 +237,17 @@ function D3_socialGraph(nodeData, linkData) {
         return d.y - 3;
       });
   }
-  console.log("W");
 }
 
 function D3_pieChartCommits(myData) {
   var data = [];
   myData.forEach((element) => {
     data.push(element.commits);
+  });
+
+  var data2 = [];
+  myData.forEach((element) => {
+    data2.push(element.repo);
   });
 
   var svg = d3.select(".chart1"),
@@ -273,10 +279,17 @@ function D3_pieChartCommits(myData) {
   ]);
 
   // Generate the pie
-  var pie = d3.pie();
+  var pie = d3.pie()
+  .sort(null); // Do not sort group by siz;
 
   // Generate the arcs
-  var arc = d3.arc().innerRadius(0).outerRadius(radius);
+  var arc = d3.arc()
+  .innerRadius(radius*0.6)
+  .outerRadius(radius*0.9);
+
+  var outerArc = d3.arc()
+  .innerRadius(radius)
+  .outerRadius(radius)
 
   //Generate groups
   var arcs = g
@@ -293,6 +306,44 @@ function D3_pieChartCommits(myData) {
       return color(i);
     })
     .attr("d", arc);
+
+    
+// Add the polylines between chart and labels:
+arcs
+.selectAll('allPolylines')
+.data(pie(data))
+.enter()
+.append('polyline')
+  .attr("stroke", "black")
+  .style("fill", "none")
+  .attr("stroke-width", 1)
+  .attr('points', function(d) {
+    var posA = arc.centroid(d) // line insertion in the slice
+    var posB = outerArc.centroid(d) // line break: we use the other arc generator that has been built only for that
+    var posC = outerArc.centroid(d); // Label position = almost the same as posB
+    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
+    posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+    return [posA, posB, posC]
+  })
+
+// Add the polylines between chart and labels:
+arcs
+.selectAll('allLabels')
+.data(pie(data))
+.enter()
+.append('text')
+  .text( function(d,i) { return data2[i] } )
+  .attr('transform', function(d) 
+  {
+      var pos = outerArc.centroid(d);
+      var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+      pos[0] = radius * 0.99 * (midangle < Math.PI ? 1 : -1);
+      return 'translate(' + pos + ')';
+  })
+  .style('text-anchor', function(d) {
+      var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+      return (midangle < Math.PI ? 'start' : 'end')
+  })
 }
 
 
@@ -300,6 +351,8 @@ function D3_pieChartCommits(myData) {
 
 
 function D3_TreeMap(childrenData){
+
+
   var svg = d3.select(".chart3");
   svg.selectAll("*").remove()
   var width = svg.attr("width");
@@ -342,8 +395,16 @@ function D3_TreeMap(childrenData){
     .enter()
     .append("text")
       .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-      .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
+      .attr("y", function(d){ return d.y0+15})    // +20 to adjust position (lower)
       .text(function(d){ return d.data.name })
       .attr("font-size", "15px")
       .attr("fill", "black")
+}
+
+
+//Other Functions
+
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
